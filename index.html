@@ -7,18 +7,20 @@
     <title>Calculateur d'IMC</title>
   </head>
   <body>
-    <main class="container">
-      <h1 class="title">Calculateur d'IMC</h1>
-      <div class="informations">
-        <label class="label" for="size"
-          >Entrez votre taille : (en cm)
-          <input type="number" name="size" id="size" />
-        </label>
-        <label class="label" for="weight"
-          >Entrez votre poids : (en kg)
-          <input type="number" name="weight" id="weight" />
-        </label>
-        <button id="sub" class="link" type="submit">Valider</button>
+    <main class="container" id="container">
+      <div class="sub-container" id="sub-container">
+        <h1 class="title">Calculateur d'IMC</h1>
+        <div class="informations">
+          <label class="label" for="size"
+            >Entrez votre taille : (en cm)
+            <input type="number" name="size" id="size" />
+          </label>
+          <label class="label" for="weight"
+            >Entrez votre poids : (en kg)
+            <input type="number" name="weight" id="weight" />
+          </label>
+          <button id="sub" class="btn" type="submit">Valider</button>
+        </div>
       </div>
     </main>
     <script src="script.js"></script>

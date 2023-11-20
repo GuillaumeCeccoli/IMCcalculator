@@ -6,11 +6,12 @@ function userData() {
     if (weight === "" || size === "") {
       if (!document.getElementById("errorInfos")) {
         // Vérifie si le message d'erreur existe déjà
+        let subContainer = document.getElementById("sub-container");
         let errorInfos = document.createElement("div");
         errorInfos.id = "errorInfos"; // Ajoute un identifiant à l'élément d'erreur
         errorInfos.innerHTML = "Les informations sont erronées";
         errorInfos.classList.add("error"); // Ajoute une classe à l'élément d'erreur
-        document.body.appendChild(errorInfos);
+        subContainer.appendChild(errorInfos);
       }
     } else {
       // Si l'élément d'erreur existe, le supprimer avant de calculer l'IMC
