@@ -19,7 +19,7 @@ function result() {
     info.textContent += " Vous êtes en obésité sévère";
     info.style.color = "red";
   } else if (imc >= 40) {
-    info.textContent += " Vous êtes en obésité morbide";
+    info.textContent += " Vous êtes en obésité massive";
     info.style.color = "red";
   }
 }
@@ -29,4 +29,3 @@ const btn = document.getElementById("sub");
 btn.addEventListener("click", () => {
   window.location.href = "index.html";
 });
-

@@ -3,6 +3,9 @@ function userData() {
   button.addEventListener("click", () => {
     let weight = document.getElementById("weight").value;
     let size = document.getElementById("size").value;
+    if (size < 10) {
+      size *= 100;
+    }
     if (weight === "" || size === "") {
       if (!document.getElementById("errorInfos")) {
         // Vérifie si le message d'erreur existe déjà
