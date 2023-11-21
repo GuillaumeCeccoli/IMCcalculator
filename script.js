@@ -1,21 +1,3 @@
-function displayError() {
-  if (!document.getElementById("errorInfos")) {
-    let subContainer = document.getElementById("sub-container");
-    let errorInfos = document.createElement("div");
-    errorInfos.id = "errorInfos";
-    errorInfos.innerHTML = "Les informations sont erronées";
-    errorInfos.classList.add("error");
-    subContainer.appendChild(errorInfos);
-  }
-}
-
-function removeError() {
-  let errorElement = document.getElementById("errorInfos");
-  if (errorElement) {
-    errorElement.remove();
-  }
-}
-
 function calculateIMC(weight, size) {
   let imc = weight / Math.pow(size / 100, 2);
   imc = imc.toFixed(2);
@@ -46,9 +28,8 @@ function userData() {
       size = Number(size) * 100;
     }
     if (weight === "" || size === "") {
-      displayError();
+      alert("Veuillez entrer des données valides");
     } else {
-      removeError();
       calculateIMC(weight, size);
     }
     controlUnit();
