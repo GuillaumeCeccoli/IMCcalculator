@@ -38,19 +38,22 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80%;
+  width: 90%;
   flex-direction: column;
 }
 
 .label {
-  margin: 1em auto;
-  text-align: center;
+  margin: 10px auto;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
 }
 
 input {
-  margin: 1em auto;
-  width: 70%;
+  margin: 20px auto;
+  width: 50%;
   height: 50px;
   border-radius: 10px;
   border: none;
@@ -62,12 +65,13 @@ input {
 }
 
 .btn {
-  width: 50%;
+  width: 30%;
   height: 45px;
-  background-color: rgb(109, 109, 83);
+  background-color: rgb(155, 98, 98);
   border: none;
   border-radius: 15px;
-  font-size: 20px;
+  font-size: 22px;
+  font-weight: bold;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -115,3 +119,4 @@ input {
     font-size: 25px;
   }
 }
+
