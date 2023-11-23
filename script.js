@@ -8,7 +8,14 @@ function calculateIMC(weight, size) {
 function controlUnit() {
   let unit = document.getElementById("unit").value;
   if (unit !== "m" && unit !== "cm") {
-    alert("Unité de mesure invalide");
+    return false;
+  } else {
+    return true;
+  }
+}
+
+function negatives(weight, size) {
+  if (weight < 0 || size < 0) {
     return false;
   } else {
     return true;
@@ -18,9 +25,6 @@ function controlUnit() {
 function userData() {
   const button = document.getElementById("sub");
   button.addEventListener("click", () => {
-    if (!controlUnit()) {
-      return;
-    }
     let weight = document.getElementById("weight").value;
     let size = document.getElementById("size").value;
     let unit = document.getElementById("unit").value;
@@ -28,11 +32,15 @@ function userData() {
       size = Number(size) * 100;
     }
     if (weight === "" || size === "") {
-      alert("Veuillez entrer des données valides");
+      alert("Veuillez remplir tous les champs");
+    } else if (controlUnit() === false) {
+      alert("Veuillez choisir une unité de mesure valide");
+    } else if (negatives(weight, size) === false) {
+      alert("Veuillez entrer des valeurs positives pour le poids ou la taille");
     } else {
       calculateIMC(weight, size);
     }
-    controlUnit();
   });
 }
 userData();
+

@@ -24,7 +24,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 340px;
+  width: 90%;
   overflow: auto;
 }
 .title {
@@ -53,7 +53,7 @@ body {
 
 input {
   margin: 20px auto;
-  width: 50%;
+  width: 70%;
   height: 50px;
   border-radius: 10px;
   border: none;
@@ -65,7 +65,7 @@ input {
 }
 
 .btn {
-  width: 30%;
+  width: 50%;
   height: 45px;
   background-color: rgb(155, 98, 98);
   border: none;
@@ -116,6 +116,11 @@ input {
     font-size: 40px;
   }
   .label {
+    font-size: 25px;
+  }
+  .btn {
+    width: 30%;
+    height: 50px;
     font-size: 25px;
   }
 }
